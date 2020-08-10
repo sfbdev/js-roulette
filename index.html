@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roulette</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="roulette">
+    <table>
+      <tr class="nums">
+        <td class="num green zero" rowspan="3">
+          <span>0</span>  
+        </td>
+        <td class="num red">
+          <span>3</span>  
+        </td>
+        <td class="num black">
+          <span>6</span>  
+        </td>
+        <td class="num red">
+          <span>9</span>  
+        </td>
+        <td class="num red">
+          <span>12</span>  
+        </td>
+        <td class="num black">
+          <span>15</span>  
+        </td>
+        <td class="num red">
+          <span>18</span>  
+        </td>
+        <td class="num red">
+          <span>21</span>  
+        </td>
+        <td class="num black">
+          <span>24</span>  </td>
+        <td class="num red">
+          <span>27</span>  
+        </td>
+        <td class="num red">
+          <span>30</span>  
+        </td>
+        <td class="num black">
+          <span>33</span>  
+        </td>
+        <td class="num red">
+          <span>36</span>  
+        </td>
+        <td class="sector" data-sector="1">
+          <span class="vt">2 to 1</span>  
+          <span style="display: none;">sag-3</span>
+        </td>
+      </tr>
+      <tr class="nums">
+        <td class="hidden"></td>
+        <td class="num black">
+          <span>2</span>  
+        </td>
+        <td class="num red">
+          <span>5</span>  
+        </td>
+        <td class="num black">
+          <span>8</span>  
+        </td>
+        <td class="num black">
+          <span>11</span>  
+        </td>
+        <td class="num red">
+          <span>14</span>  
+        </td>
+        <td class="num black">
+          <span>17</span>  
+        </td>
+        <td class="num black">
+          <span>20</span>  
+        </td>
+        <td class="num red">
+          <span>23</span>  
+        </td>
+        <td class="num black">
+          <span>26</span>  
+        </td>
+        <td class="num black">
+          <span>29</span>  
+        </td>
+        <td class="num red">
+          <span>32</span>  
+        </td>
+        <td class="num black">
+          <span>35</span>  
+        </td>
+        <td class="sector" data-sector="2">
+          <span class="vt">2 to 1</span>  
+          <span style="display: none;">sag-2</span>
+        </td>
+      </tr>
+      <tr class="nums">
+        <td class="hidden"></td>
+        <td class="num red">
+          <span>1</span>  
+          <!-- <span class="money 1-0" style="top: 50%"></span>
+          <span class="money 1-2" style="top: 0px; left: 50%;"></span>
+          <span class="money 1-2-4-5" style="top: 0px; right: -17px;"></span> -->
+        </td>
+        <td class="num black">
+          <span>4</span>  
+        </td>
+        <td class="num red">
+          <span>7</span>  
+        </td>
+        <td class="num black">
+          <span>10</span>  
+        </td>
+        <td class="num black">
+          <span>13</span>  
+        </td>
+        <td class="num red">
+          <span>16</span>  
+        </td>
+        <td class="num red">
+          <span>19</span>  
+        </td>
+        <td class="num black">
+          <span>22</span>  
+        </td>
+        <td class="num red">
+          <span>25</span>  
+        </td>
+        <td class="num black">
+          <span>28</span>  
+        </td>
+        <td class="num black">
+          <span>31</span>  
+        </td>
+        <td class="num red">
+          <span>34</span>  
+        </td>
+        <td class="sector" data-sector="3">
+          <span class="vt">2 to 1</span>  
+          <span style="display: none;">sag-1</span>
+        </td>
+      </tr>
+      <tr class="bottom-up">
+        <td class="empty"></td>
+        <td colspan="4" class="sector" data-sector="4">
+          <span>1st 12</span>  
+        </td>
+        <td colspan="4" class="sector" data-sector="5">
+          <span>2st 12</span>  
+        </td>
+        <td colspan="4" class="sector" data-sector="6">
+          <span>3st 12</span>  
+        </td>
+        <td class="empty"></td>
+      </tr>
+      <tr class="bottom-down">
+        <td class="empty"></td>
+        <td colspan="2" class="sector" data-sector="7">
+          <span>1 to 18</span>  
+        </td>
+        <td colspan="2" class="sector" data-sector="8">
+          <span>EVEN</span>  
+        </td>
+        <td colspan="2" class="sector red" data-sector="9">
+          <span>RED</span>  
+        </td>
+        <td colspan="2" class="sector black" data-sector="10">
+          <span>BLACK</span>  
+        </td>
+        <td colspan="2" class="sector" data-sector="11">
+          <span>ODD</span>  
+        </td>
+        <td colspan="2" class="sector" data-sector="12">
+          <span>19 to 36</span>  
+        </td>
+        <td class="empty"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script>
+    function getElement(number) {
+      var spans = document.getElementsByTagName("span");
+      var searchText = number;
+      var found = null;
+
+      for (var i = 0; i < spans.length; i++) {
+        if (spans[i].textContent == searchText) {
+          found = spans[i];
+          break;
+        }
+      }
+
+      return found.parentElement;
+    }
+
+    function getPositionsFromString(string) {
+      return string.split(',').map(point => {
+        return point.split('-')[0].toUpperCase();
+      });
+    };
+
+    var points = getPositionsFromString('D3-500,D6-500,EVN,D29-10');
+    console.log(points)
+
+    // let points = [
+    //   'c16'.toUpperCase(),
+    //   'c10'.toUpperCase(),
+    //   'even'.toUpperCase(),
+    // ];
+
+    var styles = [
+      ['top', 'money'],
+      ['left', 'money'],
+      ['right-top', 'money'],
+      ['center', 'money'],
+      ['center', 'money'],
+      ['center', 'money'],
+      ['center', 'money'],
+    ];
+
+    var loop = [
+      yukari,
+      sol,
+      sagUst,
+      enSag,
+      alttanIkinci,
+      numbers,
+      enAlt,
+    ];
+
+    points.forEach(point => {
+
+    for (let index = 0; index < loop.length; index++) {
+      var list = loop[index]
+      // console.log(list)
+      var node = document.createElement("span");
+      node.classList.add(...styles[index]);
+
+      if (!list[point]) {
+        continue;
+      }
+      console.log(list)
+      let position = list[point][0];
+      if (index == 1) {
+        position = list[point][1];
+      }
+
+      getElement(position).appendChild(node);
+    }
+      
+    });
+
+    </script>
+</body>
+
+</html>
