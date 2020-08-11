@@ -205,9 +205,16 @@
         if (spans[i].textContent == won) {
           found = spans[i];
           var winNode = document.createElement("span");
-          winNode.classList.add('money', 'win');
-          winNode.innerHTML = 'W'
-          return found.parentElement.appendChild(winNode)
+          var childNodes = found.parentElement.childNodes
+          console.log(childNodes)
+          if(childNodes[3]){
+            childNodes[3].classList.add('win')
+          }else {
+            winNode.classList.add('money', 'win');
+            winNode.innerHTML = 'W'
+            found.parentElement.appendChild(winNode)
+          }
+        
           break;
         }
       }
@@ -248,8 +255,8 @@
     ];
 
     //win number
-    var won = "D5".substr(1);
-    getWinNumber(won)
+    var won = "D29".substr(1);
+    
 
     bets.forEach(bet => {
       let point = bet.split('-')[0].toUpperCase()
@@ -272,6 +279,8 @@
         getElement(position).appendChild(node);
       }
     });
+
+    getWinNumber(won)
 
 
 
